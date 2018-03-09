@@ -54,6 +54,17 @@ public:
         return V.push_back(Vertex<Tv>(vertex));
     }
 
+    bool exists(int i, int j)
+    {
+        return ((0 <= i) && (n >= j) && (0 <= i) && (n >= i) && (E[i][j] != nullptr));
+    }
+
+    int insertEdge(const Te& edge, int i, int j)
+    {
+        if (exists(i, j)) return;
+        
+    }
+
 private:
     int n, e; // n:顶点的规模，e：边的规模
     std::vector<Vertex<Tv>> V; 
